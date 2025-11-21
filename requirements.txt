@@ -2,6 +2,7 @@
 numpy
 pandas
 scikit-learn
+deepchem
 
 # Cheminformatics
 rdkit-pypi
