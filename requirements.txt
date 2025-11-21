@@ -1,0 +1,15 @@
+# Core scientific stack
+numpy
+pandas
+scikit-learn
+
+# Cheminformatics
+rdkit-pypi
+
+# Deep learning + GNNs
+torch
+torch-geometric
+
+# Visualization
+matplotlib
+seaborn
