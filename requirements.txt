@@ -5,6 +5,7 @@ scikit-learn
 deepchem
 
 # Cheminformatics
+rdkit
 rdkit-pypi
 
 # Deep learning + GNNs
