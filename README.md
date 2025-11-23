@@ -112,18 +112,35 @@ These trends motivate the use of both descriptor-based models and structure-awar
 
 ---
 
-## 6. Models
+## 6. Models and Performance (Test Set)
 
-### 6.1 Random Forest Baseline
+- **Random Forest (scikit-learn, descriptor-based)**  
+  - Features: `[mol_wt, logp, h_donors, tpsa, qed]`  
+  - Approximate performance:
+    - AUC ~0.88  
+    - F1 ~0.92  
+- **GNN (GCN with PyTorch Geometric)**  
+  - Node features include atom type, degree, formal charge, aromaticity, hybridization, etc.  
+  - Approximate performance:
+    - AUC ~0.84–0.85  
+    - F1 ~0.88  
 
-Implemented in: `notebooks/02_baseline_rf.ipynb`
-
-**Features used:**
-
-```text
-["mol_wt", "logp", "h_donors", "tpsa", "qed"]
+The Random Forest slightly outperforms the GNN on this dataset, but the GNN encodes molecular structure and is better suited to more complex graph-based tasks.
 
 ---
 
-## 7. RANDOM 
+## 7. Local usage
+
+Prerequisites: Python 3.10+, conda (recommended).
+
+```bash
+# clone
+git clone https://github.com/moraditya/neuro-natural-bbbp.git
+cd neuro-natural-bbbp
+
+# environment
+conda create -n neuro-natural-bbbp python=3.10
+conda activate neuro-natural-bbbp
+pip install -r requirements.txt
+
 
